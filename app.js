@@ -7,8 +7,8 @@ app.set('view engine', 'pug');
 app.set('views', 'views');
 app.use(cookieSession({
   secret: 'barranquilla inmortal',
-  maxAge: 1 * 60 * 1000
-}))
+  maxAge: 3 * 60 * 1000
+}));
 
 app.get("/", (req, res) => { 
   req.session.views = (req.session.views || 0) + 1; 
